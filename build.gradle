@@ -1,0 +1,25 @@
+plugins {
+    id 'java-library'
+}
+
+group 'com.kpaharev'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation ('org.junit.jupiter:junit-jupiter:5.8.2',
+                        'io.rest-assured:rest-assured:5.1.0',   // подключение библиотеки REST Assured
+                        'org.slf4j:slf4j-api:1.7.36'            // подключение библиотеки логирования
+    )
+}
+
+tasks.withType(JavaCompile){
+    options.encoding = "UTF-8"
+}
+
+test {
+    useJUnitPlatform()
+}
