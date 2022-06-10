@@ -75,7 +75,7 @@ public class ReqResTests {
 
         @Test
 
-    void loginUserWrongPassword(){
+    void userDataUpdate(){
         String body = "{ \"name\": \"morpheus\", \"job\": \"zion resident\" }";
             given()
                     .log().all()
