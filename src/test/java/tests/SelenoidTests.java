@@ -24,7 +24,7 @@ public class SelenoidTests {
             .then()
                 .log().status()
                 .log().body()// вывод body котрый отадет сервер
-                .body("browsers.chrome", hasKey(100.0))
+                .body("browsers.chrome", hasKey("100.0"))
                 .body("total", is(20));
 
 }
